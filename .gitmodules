@@ -1,0 +1,14 @@
+[submodule "submodules/trusted-firmware-m"]
+	branch = meriac
+	path = submodules/trusted-firmware-m
+	url = https://github.com/meriac/trusted-firmware-m
+[submodule "submodules/mbedtls"]
+	branch = mbedtls-2.6
+	shallow = true
+	path = submodules/mbedtls
+	url = https://github.com/ARMmbed/mbedtls.git
+[submodule "submodules/CMSIS_5"]
+	branch = 5.2.0
+	path = submodules/CMSIS_5
+	shallow = true
+	url = https://github.com/ARM-software/CMSIS_5.git
