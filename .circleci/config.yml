@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: meriac/tfm-dev
+        user: build
+    steps:
+      - checkout
+      - run:
+          name: "Setup Environment Variables"
+          command: echo 'export PATH="$PATH:/usr/gcc-arm-none-eabi/bin"' >> $BASH_ENV
+      - run:
+          name: "Update submodules"
+          command: |
+            git submodule init
+            git submodule foreach --recursive 'git fetch --tags'
+            git submodule update --recursive
+      - run:
+          name: "Run Tests"
+          command: |
+            make compile
+      - store_artifacts:
+          path: build/install/outputs

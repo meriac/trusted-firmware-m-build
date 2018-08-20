@@ -5,7 +5,8 @@ IMAGE_TAG:="docker.io/meriac/tfm-dev"
 run: docker-run
 
 compile:
-	rm -rf build && mkdir -p build
+	rm -rf build
+	mkdir -p build
 	cd build && cmake ../submodules/trusted-firmware-m -G"Unix Makefiles" -DTARGET_PLATFORM=AN521 -DCOMPILER=GNUARM
 	cmake --build build -- install
 
