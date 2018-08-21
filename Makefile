@@ -7,7 +7,7 @@ run: docker-run
 compile:
 	rm -rf build
 	mkdir -p build
-	cd build && cmake ../submodules/trusted-firmware-m -G"Unix Makefiles" -DTARGET_PLATFORM=AN521 -DCOMPILER=GNUARM
+	cd build && cmake ../submodules/trusted-firmware-m -G"Unix Makefiles" -DCMAKE_BUILD_TYPE=MinSizeRel -DTARGET_PLATFORM=AN521 -DCOMPILER=GNUARM -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 	cmake --build build -- install
 
 docker-build:
