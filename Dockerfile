@@ -2,7 +2,7 @@ FROM meriac/arm-gcc
 MAINTAINER Milosch Meriac <milosch@meriac.com>
 
 # Add missing dependencies for TFM
-RUN apk add --no-cache cmake gcc g++ python3 python3-dev
+RUN apk add --no-cache cmake gcc g++ python3 python3-dev zip
 
 # Install missing python modules
 RUN pip3 install --no-cache-dir --upgrade pip && pip3 install --no-cache-dir pycrypto pyasn1
