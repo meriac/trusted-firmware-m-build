@@ -7,6 +7,7 @@ for quick access to build results in the artifacts tab. Please note that *.axf f
 provided docker image.
 
 ## Further reading
+- [Arm Trusted Firmware for M-Profile - Interactive Memory Explorer](https://www.meriac.com/tfm-explorer/)
 - MCUBoot [Secure Boot Process](https://github.com/meriac/trusted-firmware-m/blob/master/docs/user_guides/tfm_secure_boot.md)
 - [Trusted Firmware for Arm Cortex-M](https://github.com/meriac/trusted-firmware-m/tree/master#trusted-firmware-m---v01)
 - Further reading on [MCUboot](https://github.com/runtimeco/mcuboot/blob/master/docs/index.md#mcuboot)
